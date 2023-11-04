@@ -1,5 +1,6 @@
 # IFELESECOULDDASHBOARD
-
+<img src="src/assets/DashBoard.png"/>
+<img src="src/assets/DashBoard1.png"/>
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.9.
 
 ## Development server
