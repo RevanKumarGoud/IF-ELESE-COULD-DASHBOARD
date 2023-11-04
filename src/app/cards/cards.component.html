@@ -1,0 +1,45 @@
+<div class="grid grid-cols-4 gap-4">  
+    <div class="flex flex-col border shadow-sm rounded-xl dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7] bg-blue-600">
+        <div class="p-4 md:p-5 text-white">
+          <h1 class=" font-bold dark:text-white">
+            {{Card[0]?.value}}%
+          </h1>
+               <h3>
+                {{Card[0]?.header}}
+               </h3>
+               <p>
+                {{Card[0]?.sub_header}}
+               </p>
+        </div>
+      </div>
+    <div class="flex flex-col bg-white border shadow-sm rounded-xl dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7]">
+        <div class="p-4 md:p-5">
+            <span class="material-symbols-outlined float-right text-5xl text-gray-500">
+                real_estate_agent
+                </span>
+          <h1 class="text-lg font-bold text-blue-500 dark:text-white ">{{Card[1]?.value}}%</h1>
+          <h3>{{Card[1]?.header}}</h3>
+           <p>{{Card[1]?.sub_header}}</p>
+        </div>
+      </div>
+    <div class="flex flex-col bg-white border shadow-sm rounded-xl dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7]">
+        <div class="p-4 md:p-5">
+            <span class="material-symbols-outlined float-right text-4xl text-slate-600">
+                download
+                </span>          
+        <h1 class="text-lg font-bold text-blue-500 dark:text-white ">{{Card[2]?.value}}%</h1>
+          <h3>{{Card[2]?.header}}</h3>
+           <p>{{Card[2]?.sub_header}}</p>
+        </div>
+      </div>
+    <div class="flex flex-col bg-white border shadow-sm rounded-xl dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7]">
+        <div class="p-4 md:p-5">
+            <span class="material-symbols-outlined float-right text-4xl text-slate-600">
+                school
+                </span>
+          <h1 class="text-lg font-bold text-blue-500 dark:text-white">{{Card[3]?.value}}%</h1>
+          <h3>{{Card[3]?.header}}</h3>
+           <p>{{Card[3]?.sub_header}}</p>
+        </div>
+      </div>
+</div>

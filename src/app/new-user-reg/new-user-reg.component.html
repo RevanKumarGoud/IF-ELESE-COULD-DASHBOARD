@@ -1,0 +1,23 @@
+<mat-card class="w-auto">
+    <mat-card-header class="font-sans font-bold text-sm mb-6">New User Regestation</mat-card-header>
+    <mat-card-content *ngFor="let item of pagedCardData">
+        <div class="grid grid-cols-4 gap-7 pl-4 pr-4 my-3">
+            <img src="{{item.picture}}" class="rounded-full px-0" alt="">
+            <p>{{item.name}}</p>
+            <div class="w-auto h-4 bg-gray-300 rounded-full dark:bg-gray-100" >
+                <div class="bg-blue-600 text-blue-100 text-center  rounded-full h-4"
+                [ngStyle]="{'width': item.progress + '%'}">
+                {{ item.progress }}%
+                </div>
+            </div>            
+            <button class="w-1/2 flex-nowrap mx-10" mat-raised-button color="primary">More</button>
+        </div>
+    </mat-card-content>
+</mat-card>
+<mat-paginator
+    class="w-full"
+    [length]="NewUsers?.length"
+    [pageSize]="itemsPerPage"
+   [pageSizeOptions]="[5,10, 20]"
+  (page)="onPageChange($event)">
+  </mat-paginator>

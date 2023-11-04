@@ -1,0 +1,31 @@
+.example-container {
+    height: 100%;
+  }
+  .example-sidenav-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .example-sidenav {
+     user-select: none;
+  }
+  .full-width {
+    width: 100%;
+  }
+  .submenu {
+    overflow-y: auto;
+    transition: transform 300ms ease;
+    transform: scaleY(0);
+    transform-origin: top;
+    padding-left:50px;
+  }
+  .submenu.expanded {
+    transform: scaleY(1);
+  }
+  .mat-drawer-side{
+    border-right-width:0px;
+    border-color: antiquewhite;
+    
+  }
+ 

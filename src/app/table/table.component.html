@@ -1,0 +1,62 @@
+
+<div>
+    <table class="text-sm text-left text-gray-500 dark:text-gray-400 ">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                    #ID
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Customer
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Products
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    DeliveryDate
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Status
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Tracking number
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    shipping
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let Product of pagedTableData; let i = index" class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                {{ i +1 + (paginator.pageIndex * paginator.pageSize) }}
+              </th>
+              <td class="px-6 py-4">
+                {{ Product.name }}
+              </td>
+              <td class="px-6 py-4">
+                {{ Product.product }}
+              </td>
+              <td class="px-6 py-4">
+                {{ Product.delivery_date | date: 'dd EEE y' }}
+              </td>
+              <td class="px-6 py-4">
+                <button mat-raised-button  color="{{ getStatusColor(Product.status) }}"> {{Product.status }}</button>
+              </td>
+              <td class="px-6 py-4">
+                {{ Product.tracking_no}}
+              </td>
+              <td class="px-6 py-4">
+                {{ Product.shipping }}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <mat-paginator
+      class=" w-auto"
+      [length]="TableData?.length"
+      [pageSize]="itemsPerPage"
+     [pageSizeOptions]="[5,10, 20, 50]"
+    (page)="onPageChange($event)">
+    </mat-paginator>
